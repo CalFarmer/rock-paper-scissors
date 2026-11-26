@@ -5,7 +5,15 @@ A classic game played against a computer
 
 Generate computer input
 Take input from player
+    rock = 1
+    paper = 2
+    scissors = 3
+
 Run game
+    1 beats 2
+    2 beats 3
+    3 beats 1
+    
 Store winner
 Increase round number by 1
 Check if round number is 5
