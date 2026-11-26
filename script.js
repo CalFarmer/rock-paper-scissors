@@ -18,49 +18,52 @@ scissors.addEventListener("click",playerScissors)
 function playerRock() {
     playercChoice = 1
     runGame()
-    console.log(playercChoice)
+    
 }
 
 function playerPaper() {
     playercChoice = 2
     runGame()
-    console.log(playercChoice)
+    
 }
 
 function playerScissors() {
     playercChoice = 2
     runGame()
-    console.log(playercChoice)
+    
 }
 
 // game logic
 function runGame() {
     let randomChoice = Math.floor(Math.random() * 3) + 1;
     if(randomChoice === 1) {
-        if(playercChoice === 1)
+        if(playercChoice === 1) {
         console.log("tie")
-    } else if(playercChoice === 3) {
+        } else if(playercChoice === 3) {
         console.log("player wins")
-    } else if(playercChoice === 2){
+        } else if(playercChoice === 2){
         console.log("player loses")
-    } 
-
+        } 
+    }
     if(randomChoice === 2) {
-        if(playercChoice === 2)
+        if(playercChoice === 2) {
         console.log("tie")
-    } else if(playercChoice === 1) {
+        } else if(playercChoice === 1) {
         console.log("player wins")
-    } else if(playercChoice === 3) {
+        } else if(playercChoice === 3){
         console.log("player loses")
-    } 
-
+        } 
+    }
     if(randomChoice === 3) {
-        if(playercChoice === 3)
+        if(playercChoice === 3) {
         console.log("tie")
-    } else if(playercChoice === 2) {
+        } else if(playercChoice === 2) {
         console.log("player wins")
-    } else if(playercChoice === 1) {
+        } else if(playercChoice === 1){
         console.log("player loses")
-    } 
+        } 
+    }
+    console.log(randomChoice)
+    
+    
 }
-console.log(playercChoice)
