@@ -39,31 +39,52 @@ function runGame() {
     if(randomChoice === 1) {
         if(playercChoice === 1) {
         console.log("tie")
+
         } else if(playercChoice === 3) {
         console.log("player wins")
+
         } else if(playercChoice === 2){
         console.log("player loses")
+
         } 
     }
     if(randomChoice === 2) {
         if(playercChoice === 2) {
         console.log("tie")
+
         } else if(playercChoice === 1) {
         console.log("player wins")
+
         } else if(playercChoice === 3){
         console.log("player loses")
+
         } 
     }
     if(randomChoice === 3) {
         if(playercChoice === 3) {
         console.log("tie")
+
         } else if(playercChoice === 2) {
         console.log("player wins")
+
         } else if(playercChoice === 1){
         console.log("player loses")
+
         } 
     }
     console.log(randomChoice)
     
+    
+}
+
+function win() {
+
+}
+
+function tie() {
+
+}
+
+function loss() {
     
 }
