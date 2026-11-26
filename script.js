@@ -4,7 +4,9 @@
 const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
-let playercChoice;
+// let playercChoice;
+let round = 0
+
 
 rock.addEventListener("click",playerRock)
 paper.addEventListener("click",playerPaper)
@@ -42,22 +44,22 @@ function runGame() {
 
         } else if(playercChoice === 3) {
         console.log("player wins")
-
+        win()
         } else if(playercChoice === 2){
         console.log("player loses")
-
+        loss()
         } 
     }
     if(randomChoice === 2) {
         if(playercChoice === 2) {
         console.log("tie")
-
+        tie()
         } else if(playercChoice === 1) {
         console.log("player wins")
-
+        win()
         } else if(playercChoice === 3){
         console.log("player loses")
-
+        loss()
         } 
     }
     if(randomChoice === 3) {
@@ -66,19 +68,21 @@ function runGame() {
 
         } else if(playercChoice === 2) {
         console.log("player wins")
-
+        win()
         } else if(playercChoice === 1){
         console.log("player loses")
-
+        loss()
         } 
     }
-    console.log(randomChoice)
+    // console.log(randomChoice)
     
     
 }
 
 function win() {
-
+    round = round + 1
+    console.log(round)
+    // if (round === 5)
 }
 
 function tie() {
@@ -86,5 +90,6 @@ function tie() {
 }
 
 function loss() {
-    
+    round = round + 1
+    console.log(round)
 }
