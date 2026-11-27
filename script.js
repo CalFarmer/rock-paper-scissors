@@ -6,6 +6,8 @@ const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
 // let playercChoice;
 let round = 0
+let playerScore = 0
+let computerScore = 0
 
 
 rock.addEventListener("click",playerRock)
@@ -18,21 +20,26 @@ scissors.addEventListener("click",playerScissors)
 // 3 beats 1
 
 function playerRock() {
+    if (round < 5) {
     playercChoice = 1
     runGame()
-    
+    } //else {
+    //finishGame(computerScore, playerScore)
+    //}
 }
 
 function playerPaper() {
+    if (round < 5) {
     playercChoice = 2
     runGame()
-    
+    } 
 }
 
 function playerScissors() {
-    playercChoice = 2
+    if (round < 5) {
+    playercChoice = 3
     runGame()
-    
+    } 
 }
 
 // game logic
@@ -41,7 +48,7 @@ function runGame() {
     if(randomChoice === 1) {
         if(playercChoice === 1) {
         console.log("tie")
-
+        tie()
         } else if(playercChoice === 3) {
         console.log("player wins")
         win()
@@ -65,7 +72,7 @@ function runGame() {
     if(randomChoice === 3) {
         if(playercChoice === 3) {
         console.log("tie")
-
+        tie()
         } else if(playercChoice === 2) {
         console.log("player wins")
         win()
@@ -81,15 +88,31 @@ function runGame() {
 
 function win() {
     round = round + 1
-    console.log(round)
-    // if (round === 5)
+    console.log("round", round)
+    playerScore = playerScore + 1
+    checkRound()
 }
-
 function tie() {
-
+    console.log("retry")
+    checkRound()
 }
 
 function loss() {
     round = round + 1
-    console.log(round)
+    console.log("round", round)
+    computerScore = computerScore + 1
+    checkRound()
+}
+
+function checkRound() {
+    if (round === 5)
+    finishGame(computerScore, playerScore)
+}
+
+function finishGame(computer, player) {
+    if(computer > player) {
+        console.log("You Lose")
+    } else {
+        console.log("You Win")
+    }
 }
